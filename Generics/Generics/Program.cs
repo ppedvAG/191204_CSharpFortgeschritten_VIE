@@ -68,9 +68,9 @@ namespace Generics
             //Console.WriteLine(stringStack.Pop()); 
             #endregion
 
-            MachEtwas(12);
-            MachEtwas("Hallo Welt");
-            MachEtwas(new GenericStack<double>());
+            //MachEtwas(12);
+            //MachEtwas("Hallo Welt");
+            //MachEtwas(new GenericStack<double>());
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
