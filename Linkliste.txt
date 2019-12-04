@@ -1,2 +1,5 @@
 Originaler .NET Framework Quellcode:
 https://referencesource.microsoft.com/
+
+Beispiele für LINQ -Queries:
+https://linqsamples.com/
