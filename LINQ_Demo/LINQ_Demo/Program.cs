@@ -110,6 +110,16 @@ namespace LINQ_Demo
                 ; // Wenn alle Positiv sind, dann ......
 
             
+            
+            // Übung:
+
+            // LINQ - Queries erstellen für:
+
+            // Durchschnittskontostand von allen Personen über 60
+            // Die Person mit den meisten Schulden
+            // Durchschnittsalter aller Personen mit Schulden
+
+
 
             Console.WriteLine("----ENDE----");
             Console.ReadKey();
