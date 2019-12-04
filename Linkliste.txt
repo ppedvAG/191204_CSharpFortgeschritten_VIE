@@ -1,0 +1,2 @@
+Originaler .NET Framework Quellcode:
+https://referencesource.microsoft.com/
