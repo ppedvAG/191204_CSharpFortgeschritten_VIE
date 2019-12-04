@@ -72,6 +72,18 @@ namespace Generics
             //MachEtwas("Hallo Welt");
             //MachEtwas(new GenericStack<double>());
 
+            // Übung: Dictionary selber bauen ;)
+
+            //
+
+            // indexer + TAB + TAB
+
+
+            MyDictionary<int, string> dict = new MyDictionary<int, string>();
+
+
+            Console.WriteLine(dict[0]);
+
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
         }

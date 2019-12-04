@@ -40,5 +40,14 @@ namespace Generics
             return data[position];
         }
 
+        // snippet:
+        // indexer + TAB + TAB
+
+        //public int this[int index]
+        //{
+        //    get { return 42; }
+        //    set { data[index] = value }
+        //}
+
     }
 }
