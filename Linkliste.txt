@@ -6,3 +6,6 @@ https://linqsamples.com/
 
 Hilfswebseite für REGEX:
 https://regexr.com/
+
+Autoupdate mit ClickOnce
+https://docs.microsoft.com/en-us/visualstudio/deployment/how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api?view=vs-2019
