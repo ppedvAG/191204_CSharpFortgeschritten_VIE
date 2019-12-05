@@ -3,3 +3,6 @@ https://referencesource.microsoft.com/
 
 Beispiele für LINQ -Queries:
 https://linqsamples.com/
+
+Hilfswebseite für REGEX:
+https://regexr.com/
