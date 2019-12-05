@@ -109,8 +109,8 @@ namespace LINQ_Demo
             else if (personen.All(x => x.Kontostand > 0))
                 ; // Wenn alle Positiv sind, dann ......
 
-            
-            
+
+
             // Übung:
 
             // LINQ - Queries erstellen für:
@@ -119,7 +119,7 @@ namespace LINQ_Demo
             // Die Person mit den meisten Schulden
             // Durchschnittsalter aller Personen mit Schulden
 
-
+            Console.WriteLine("Das durchschnittsalter ist: {0:D4}");
 
             Console.WriteLine("----ENDE----");
             Console.ReadKey();
