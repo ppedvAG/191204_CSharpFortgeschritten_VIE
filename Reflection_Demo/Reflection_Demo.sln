@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reflection_Demo", "Reflection_Demo\Reflection_Demo.csproj", "{A5D15504-F9C6-4C60-99F2-E486514F7830}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taschenrechner", "Taschenrechner\Taschenrechner.csproj", "{DC2E0CA1-D096-4D51-A349-F397D91E4B8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TrumpTaschenrechner", "TrumpTaschenrechner\TrumpTaschenrechner.csproj", "{74F1E69D-55FF-43CA-BF97-2674361E8896}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{A5D15504-F9C6-4C60-99F2-E486514F7830}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5D15504-F9C6-4C60-99F2-E486514F7830}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5D15504-F9C6-4C60-99F2-E486514F7830}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC2E0CA1-D096-4D51-A349-F397D91E4B8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC2E0CA1-D096-4D51-A349-F397D91E4B8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC2E0CA1-D096-4D51-A349-F397D91E4B8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC2E0CA1-D096-4D51-A349-F397D91E4B8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F1E69D-55FF-43CA-BF97-2674361E8896}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F1E69D-55FF-43CA-BF97-2674361E8896}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F1E69D-55FF-43CA-BF97-2674361E8896}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F1E69D-55FF-43CA-BF97-2674361E8896}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
