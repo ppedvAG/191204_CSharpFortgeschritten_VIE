@@ -15,5 +15,4 @@ namespace SOLID_Taschenrechner
             new KonsolenUI(parser,rechner).Start();
         }
     }
-
 }
