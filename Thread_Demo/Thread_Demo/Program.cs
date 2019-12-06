@@ -60,7 +60,6 @@ namespace Thread_Demo
 
             //Interlocked.Increment(ref zahl1); 
 
-
             // Mutex:
             // App nur 1 mal starten:
 
