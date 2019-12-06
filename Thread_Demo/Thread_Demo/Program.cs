@@ -55,6 +55,12 @@ namespace Thread_Demo
             #endregion
 
 
+            //int zahl1 = 5;
+            //zahl1++;
+
+            //Interlocked.Increment(ref zahl1); 
+
+
             // Mutex:
             // App nur 1 mal starten:
 
