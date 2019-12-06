@@ -36,24 +36,57 @@ namespace Thread_Demo
             //Console.WriteLine("Thread ist fertig :) "); 
             #endregion
 
-            // Surround With ( STRG + K  STRG + S)
+            #region ThreadPool
+            //// Surround With ( STRG + K  STRG + S)
 
-            // ThreadPool.QueueUserWorkItem(MachWasImPool1);
-            // ThreadPool.QueueUserWorkItem(MachWasImPool2);
-            // ThreadPool.QueueUserWorkItem(MachWasImPool3);
+            //// ThreadPool.QueueUserWorkItem(MachWasImPool1);
+            //// ThreadPool.QueueUserWorkItem(MachWasImPool2);
+            //// ThreadPool.QueueUserWorkItem(MachWasImPool3);
 
-            // Anwendungsfall Konto: 
+            //// Anwendungsfall Konto:  
+            #endregion
 
-            Konto meinKonto = new Konto();
+            #region Beispiel Monitor / Lock()
+            //Konto meinKonto = new Konto();
+            //for (int i = 0; i < 100; i++)
+            //{
+            //    ThreadPool.QueueUserWorkItem(MachEinKontoUpdate, meinKonto);
+            //} 
+            #endregion
+
+
+            // Mutex:
+            // App nur 1 mal starten:
+
+            bool neuesProgramm = false;
+            Mutex mutex = null;
+
+            do
+            {
+                if (neuesProgramm == false)
+                {
+                    mutex = new Mutex(false, "DemoMutex123", out neuesProgramm);
+                    if (neuesProgramm == false)
+                    {
+                        Console.WriteLine("Das Programm ist bereits offen, neuer Versuch in 3 sek !!!!");
+                        mutex.Close();
+                        Thread.Sleep(3000);
+                    }
+                }
+            } while (neuesProgramm == false);
+
+
+
             for (int i = 0; i < 100; i++)
             {
-                ThreadPool.QueueUserWorkItem(MachEinKontoUpdate, meinKonto);
+                mutex.WaitOne();
+                Thread.Sleep(100);
+                Console.WriteLine(i);
+                mutex.ReleaseMutex();
             }
 
-
-            // ALT + Pfeilrauf/runter
-
             Console.WriteLine("---ENDE---");
+            mutex.Close(); // nicht vergessen !
             Console.ReadKey();
         }
 
@@ -124,7 +157,7 @@ namespace Thread_Demo
                     }
                     //return; 
                 }
- 
+
             }
         }
 
