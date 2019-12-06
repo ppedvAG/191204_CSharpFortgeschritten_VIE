@@ -25,17 +25,27 @@ namespace AsyncAwait_Demo
         {
             InitializeComponent();
         }
+        private CancellationTokenSource cts = new CancellationTokenSource();
 
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             buttonTask.IsEnabled = false;
             MessageBox.Show("Start");
 
-            await Task.Run(MachEtwasImUI); // Wartet bis der Task fertig ist
+            //await Task.Run(MachEtwasImUI); // Wartet bis der Task fertig ist
 
             // t1.Wait(); ---> Problem
+
+            Berechnung b1 = new Berechnung();
+            await b1.MachEineBerechnungAsync(RefreshUI,cts);
+
             MessageBox.Show("Ende");
             buttonTask.IsEnabled = true;
+        }
+
+        private void RefreshUI(int i)
+        {
+            Dispatcher.Invoke(() => progressBarWert.Value = i);
         }
 
         private void MachEtwasImUI()
@@ -50,7 +60,10 @@ namespace AsyncAwait_Demo
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("TEST TEST TEST");
+            cts.Cancel();
+            // Neues Fenster öffnen
+            // MainWindow mw = new MainWindow();
+            // mw.Show();
         }
     }
 }

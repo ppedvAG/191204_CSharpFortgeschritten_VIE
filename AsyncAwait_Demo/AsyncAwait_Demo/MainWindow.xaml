@@ -10,7 +10,7 @@
     <StackPanel Margin="10">
         <TextBox Margin="5"/>
         <Button x:Name="buttonTask" Content="Start !" Margin="5" Click="Button_Click"/>
-        <Button Content="Test !" Margin="5" Click="Button_Click_1"/>
+        <Button Content="Cancel !" Margin="5" Click="Button_Click_1"/>
         <ProgressBar x:Name="progressBarWert" Minimum="0" Maximum="100" Height="30" Margin="5"/>
     </StackPanel>
 </Window>
