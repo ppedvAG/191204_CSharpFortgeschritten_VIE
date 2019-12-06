@@ -16,7 +16,6 @@ namespace SOLID_Taschenrechner
 
             do
             {
-
                 Console.WriteLine("Bitte geben Sie Ihren Usernamen ein (Beenden mit 'q'):");
                 user = Console.ReadLine();
 
