@@ -38,12 +38,42 @@ namespace Thread_Demo
 
             // Surround With ( STRG + K  STRG + S)
 
-            ThreadPool.QueueUserWorkItem(MachWasImPool1);
-            ThreadPool.QueueUserWorkItem(MachWasImPool2);
-            ThreadPool.QueueUserWorkItem(MachWasImPool3);
+            // ThreadPool.QueueUserWorkItem(MachWasImPool1);
+            // ThreadPool.QueueUserWorkItem(MachWasImPool2);
+            // ThreadPool.QueueUserWorkItem(MachWasImPool3);
+
+            // Anwendungsfall Konto: 
+
+            Konto meinKonto = new Konto();
+            for (int i = 0; i < 100; i++)
+            {
+                ThreadPool.QueueUserWorkItem(MachEinKontoUpdate, meinKonto);
+            }
+
+
+            // ALT + Pfeilrauf/runter
 
             Console.WriteLine("---ENDE---");
             Console.ReadKey();
+        }
+
+        private static void MachEinKontoUpdate(object state)
+        {
+            Random r = new Random();
+            Konto meinKonto = (Konto)state;
+
+            for (int i = 0; i < 10; i++)
+            {
+                int auswahl = r.Next(0, 10);
+                if (auswahl % 2 == 0)
+                    meinKonto.Einzahlen(r.Next(0, 1000));
+                else if (meinKonto.Kontostand < 0) // Abfrage
+                    meinKonto.Einzahlen(r.Next(0, 1000));
+                else
+                    meinKonto.Abheben(r.Next(0, 1000));
+
+                Console.WriteLine(meinKonto.Kontostand);
+            }
         }
 
         private static void MachWasImPool3(object state)
